@@ -1,0 +1,69 @@
+<%= form_with(model: tv_show, local: true) do |form| %>
+  <% if tv_show.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tv_show.errors.count, "error") %> prohibited this tv_show from being saved:</h2>
+
+      <ul>
+      <% tv_show.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :tv_show_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :tv_show_description %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :telecast_time %>
+    <%= form.text_field :telecast_time, id: :tv_show_telecast_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recurrence_event %>
+    <%= form.text_field :recurrence_event, id: :tv_show_recurrence_event %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :days %>
+    <%= form.text_field :days, id: :tv_show_days %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.text_field :duration, id: :tv_show_duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :tv_show_status %>
+  </div>
+  <div class="field">
+    <%= form.select(:category_id) do %>
+      <% [['Lisbon', 1], ['Madrid', 2], ['Berlin', 3]].each do |c| %>
+        <%= content_tag(:option, c.first, value: c.last) %>
+      <% end %>
+      <% end %>
+      </div>
+      <div class="field">
+        <%= form.select(:channel_id) do %>
+          <% [['Lisbon', 1], ['Madrid', 2], ['Berlin', 3]].each do |c| %>
+            <%= content_tag(:option, c.first, value: c.last) %>
+          <% end %>
+          <% end %>
+          </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

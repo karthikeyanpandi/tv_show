@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tv_show.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tv_show.description %>
+</p>
+
+<p>
+  <strong>Telecast time:</strong>
+  <%= @tv_show.telecast_time %>
+</p>
+
+<p>
+  <strong>Recurrence event:</strong>
+  <%= @tv_show.recurrence_event %>
+</p>
+<p>
+  <strong>Days:</strong>
+  <%= @tv_show.days %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @tv_show.duration %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @tv_show.status %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @tv_show.category.name %>
+</p>
+<p>
+  <strong>Channel:</strong>
+  <%= @tv_show.channel.name  %>
+</p>
+
+
+<%= link_to 'Edit', edit_tv_show_path(@tv_show) %> |
+<%= link_to 'Back', tv_shows_path %>

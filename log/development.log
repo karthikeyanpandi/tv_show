@@ -1,0 +1,831 @@
+Started GET "/" for ::1 at 2020-05-01 12:16:52 +0530
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.7) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (139.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (106.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTvShows (20200501063956)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tv_shows" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" varchar, "stream_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200501063956"]]
+  [1m[35m (129.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-01 06:47:01.779125"], ["updated_at", "2020-05-01 06:47:01.779125"]]
+  [1m[35m (100.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-05-01 12:17:07 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 13ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tv_shows" for ::1 at 2020-05-01 12:17:12 +0530
+Processing by TvShowsController#index as HTML
+  Rendering tv_shows/index.html.erb within layouts/application
+  [1m[36mTvShow Load (0.1ms)[0m  [1m[34mSELECT "tv_shows".* FROM "tv_shows"[0m
+  Rendered tv_shows/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 218ms (Views: 214.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tv_shows/new" for ::1 at 2020-05-01 12:17:14 +0530
+Processing by TvShowsController#new as HTML
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (11.2ms)
+  Rendered tv_shows/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 33ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mTvShow Load (0.1ms)[0m  [1m[34mSELECT  "tv_shows".* FROM "tv_shows" ORDER BY "tv_shows"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-05-01 12:39:07 +0530
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.7) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (131.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (97.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8310537538384946025)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategories (20200501070722)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (95.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200501070722"]]
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateChannels (20200501070724)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (97.9ms)[0m  [1m[35mCREATE TABLE "channels" ("id" bigserial primary key, "name" character varying, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200501070724"]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTvShows (20200501070818)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (99.1ms)[0m  [1m[35mCREATE TABLE "tv_shows" ("id" bigserial primary key, "name" character varying, "description" character varying, "channels_id" bigint, "categories_id" bigint, "telecast_time" timestamp NOT NULL, "recurrence_event" boolean DEFAULT 'f', "days" character varying[], "duration" integer, "status" character varying DEFAULT 'ON GOING', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (47.8ms)[0m  [1m[35mCREATE  INDEX  "index_tv_shows_on_categories_id" ON "tv_shows"  ("categories_id")[0m
+  [1m[35m (39.9ms)[0m  [1m[35mCREATE  INDEX  "index_tv_shows_on_channels_id" ON "tv_shows"  ("channels_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200501070818"]]
+  [1m[35m (19.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-01 07:09:16.416238"], ["updated_at", "2020-05-01 07:09:16.416238"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8310537538384946025)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-05-01 12:39:23 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 14ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tv_shows" for ::1 at 2020-05-01 12:39:28 +0530
+Processing by TvShowsController#index as HTML
+  Rendering tv_shows/index.html.erb within layouts/application
+  [1m[36mTvShow Load (0.8ms)[0m  [1m[34mSELECT "tv_shows".* FROM "tv_shows"[0m
+  Rendered tv_shows/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 217ms (Views: 200.9ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/tv_shows/new" for ::1 at 2020-05-01 12:39:30 +0530
+Processing by TvShowsController#new as HTML
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (11.1ms)
+  Rendered tv_shows/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 43ms (Views: 28.2ms | ActiveRecord: 3.4ms)
+
+
+  [1m[36mTvShow Load (0.4ms)[0m  [1m[34mSELECT  "tv_shows".* FROM "tv_shows" ORDER BY "tv_shows"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8310537538384946025)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategories (20200501070722)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8310537538384946025)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8310537538384946025)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategories (20200501070722)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (151.0ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200501070722"]]
+  [1m[35m (14.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateChannels (20200501070724)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (97.8ms)[0m  [1m[35mCREATE TABLE "channels" ("id" bigserial primary key, "name" character varying, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200501070724"]]
+  [1m[35m (15.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTvShows (20200501071422)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (90.0ms)[0m  [1m[35mCREATE TABLE "tv_shows" ("id" bigserial primary key, "name" character varying, "description" character varying, "channels_id" bigint, "categories_id" bigint, "telecast_time" timestamp, "recurrence_event" boolean, "days" character varying, "duration" integer, "status" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200501071422"]]
+  [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8310537538384946025)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8310537538384946025)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ActsAsFavoritorMigration (20200501074212)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "favorites"[0m
+  [1m[35m (94.6ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "favoritable_type" character varying NOT NULL, "favoritable_id" bigint NOT NULL, "favoritor_type" character varying NOT NULL, "favoritor_id" bigint NOT NULL, "scope" character varying DEFAULT 'favorite' NOT NULL, "blocked" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (48.0ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_favoritable_type_and_favoritable_id" ON "favorites"  ("favoritable_type", "favoritable_id")[0m
+  [1m[35m (47.4ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_favoritor_type_and_favoritor_id" ON "favorites"  ("favoritor_type", "favoritor_id")[0m
+  [1m[35m (32.2ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_scope" ON "favorites"  ("scope")[0m
+  [1m[35m (59.9ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_blocked" ON "favorites"  ("blocked")[0m
+  [1m[35m (51.9ms)[0m  [1m[35mCREATE  INDEX  "fk_favorites" ON "favorites"  ("favoritor_id", "favoritor_type")[0m
+  [1m[35m (39.8ms)[0m  [1m[35mCREATE  INDEX  "fk_favoritables" ON "favorites"  ("favoritable_id", "favoritable_type")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200501074212"]]
+  [1m[35m (16.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8310537538384946025)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8310537538384946025)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ActsAsFavoritorMigration (20200501074212)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "favorites"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200501074212"]]
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8310537538384946025)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8310537538384946025)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTvShows (20200501071422)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "tv_shows"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200501071422"]]
+  [1m[35m (26.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8310537538384946025)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8310537538384946025)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTvShows (20200501071422)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (150.0ms)[0m  [1m[35mCREATE TABLE "tv_shows" ("id" bigserial primary key, "name" character varying, "description" character varying, "telecast_time" timestamp, "recurrence_event" boolean, "days" character varying, "duration" integer, "status" character varying, "channel_id" bigint, "category_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (47.8ms)[0m  [1m[35mCREATE  INDEX  "index_tv_shows_on_channel_id" ON "tv_shows"  ("channel_id")[0m
+  [1m[35m (48.3ms)[0m  [1m[35mCREATE  INDEX  "index_tv_shows_on_category_id" ON "tv_shows"  ("category_id")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200501071422"]]
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ActsAsFavoritorMigration (20200501074212)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "favorites"[0m
+  [1m[35m (98.2ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" bigserial primary key, "favoritable_type" character varying NOT NULL, "favoritable_id" bigint NOT NULL, "favoritor_type" character varying NOT NULL, "favoritor_id" bigint NOT NULL, "scope" character varying DEFAULT 'favorite' NOT NULL, "blocked" boolean DEFAULT 'f' NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (40.2ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_favoritable_type_and_favoritable_id" ON "favorites"  ("favoritable_type", "favoritable_id")[0m
+  [1m[35m (45.1ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_favoritor_type_and_favoritor_id" ON "favorites"  ("favoritor_type", "favoritor_id")[0m
+  [1m[35m (50.8ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_scope" ON "favorites"  ("scope")[0m
+  [1m[35m (54.5ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_blocked" ON "favorites"  ("blocked")[0m
+  [1m[35m (43.0ms)[0m  [1m[35mCREATE  INDEX  "fk_favorites" ON "favorites"  ("favoritor_id", "favoritor_type")[0m
+  [1m[35m (39.6ms)[0m  [1m[35mCREATE  INDEX  "fk_favoritables" ON "favorites"  ("favoritable_id", "favoritable_type")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200501074212"]]
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8310537538384946025)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8310537538384946025)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20200501080010)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (93.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (39.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (40.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200501080010"]]
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8310537538384946025)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-05-01 13:30:35 +0530
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 14ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-05-01 13:30:38 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (272.6ms)
+Completed 200 OK in 832ms (Views: 440.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-05-01 13:30:40 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-05-01 13:30:49 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qOGDOaeRsU6pPMoQmV19wWsSXXRVm6MtzwV94oI1ZsgXv3YC7cSNAMeTF7LkfNRjMRp7Ll1HAVtUxqOHF9sjEg==", "user"=>{"email"=>"karthikeyan.p@techmango.net", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "karthikeyan.p@techmango.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "karthikeyan.p@techmango.net"], ["encrypted_password", "$2a$11$yXXItJ040Zz77hM6GOEDaOzAXBeYl8xfV1E34DjV8ZvBz0sRSwM/u"], ["created_at", "2020-05-01 08:00:49.650240"], ["updated_at", "2020-05-01 08:00:49.650240"]]
+  [1m[35m (135.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 353ms (ActiveRecord: 136.9ms)
+
+
+Started GET "/" for ::1 at 2020-05-01 13:30:49 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/tv_shows" for ::1 at 2020-05-01 13:31:42 +0530
+  
+SyntaxError (/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/controllers/tv_shows_controller.rb:72: syntax error, unexpected ',', expecting ')'
+ :recurrence_event, :boolean,, :days, :string,, :duration, :
+                              ^):
+  
+app/controllers/tv_shows_controller.rb:72: syntax error, unexpected ',', expecting ')'
+Started GET "/tv_shows" for ::1 at 2020-05-01 13:32:16 +0530
+Processing by TvShowsController#index as HTML
+  Rendering tv_shows/index.html.erb within layouts/application
+  Rendered tv_shows/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:36: syntax error, unexpected ')', expecting '='
+er.append=( tv_show.boolean, );@output_buffer.safe_append='<
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:38: syntax error, unexpected ')', expecting '='
+fer.append=( tv_show.string, );@output_buffer.safe_append='<
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:40: syntax error, unexpected ')', expecting '='
+er.append=( tv_show.integer, );@output_buffer.safe_append='<
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:42: syntax error, unexpected ')', expecting '='
+fer.append=( tv_show.string, );@output_buffer.safe_append='<
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:44: syntax error, unexpected ')', expecting '='
+append=( tv_show.belongs_to, );@output_buffer.safe_append='<
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:51: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:60: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:62: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tv_shows/index.html.erb:36: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/index.html.erb:38: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/index.html.erb:40: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/index.html.erb:42: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/index.html.erb:44: syntax error, unexpected ')', expecting '='
+append=( tv_show.belongs_to, );@output_buffer.safe_append='<
+app/views/tv_shows/index.html.erb:51: syntax error, unexpected keyword_end, expecting ')'
+app/views/tv_shows/index.html.erb:60: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tv_shows/index.html.erb:62: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tv_shows" for ::1 at 2020-05-01 13:32:49 +0530
+Processing by TvShowsController#index as HTML
+  Rendering tv_shows/index.html.erb within layouts/application
+  Rendered tv_shows/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:36: syntax error, unexpected ')', expecting '='
+er.append=( tv_show.boolean, );@output_buffer.safe_append='<
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:38: syntax error, unexpected ')', expecting '='
+fer.append=( tv_show.string, );@output_buffer.safe_append='<
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:40: syntax error, unexpected ')', expecting '='
+er.append=( tv_show.integer, );@output_buffer.safe_append='<
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:42: syntax error, unexpected ')', expecting '='
+fer.append=( tv_show.string, );@output_buffer.safe_append='<
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:44: syntax error, unexpected ')', expecting '='
+append=( tv_show.belongs_to, );@output_buffer.safe_append='<
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:51: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:60: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/index.html.erb:62: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tv_shows/index.html.erb:36: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/index.html.erb:38: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/index.html.erb:40: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/index.html.erb:42: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/index.html.erb:44: syntax error, unexpected ')', expecting '='
+append=( tv_show.belongs_to, );@output_buffer.safe_append='<
+app/views/tv_shows/index.html.erb:51: syntax error, unexpected keyword_end, expecting ')'
+app/views/tv_shows/index.html.erb:60: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tv_shows/index.html.erb:62: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tv_shows" for ::1 at 2020-05-01 13:33:17 +0530
+Processing by TvShowsController#index as HTML
+  Rendering tv_shows/index.html.erb within layouts/application
+  [1m[36mTvShow Load (0.5ms)[0m  [1m[34mSELECT "tv_shows".* FROM "tv_shows"[0m
+  Rendered tv_shows/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tv_shows/new" for ::1 at 2020-05-01 13:33:19 +0530
+Processing by TvShowsController#new as HTML
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (8.1ms)
+  Rendered tv_shows/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 43ms (Views: 29.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/tv_shows" for ::1 at 2020-05-01 13:34:03 +0530
+Processing by TvShowsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O+CEjfs1xCW5DjFeKErrZOje3xYxXD9pQtL6EZW353nxZfKrMlVIRhL6CaVWCOREkB3u+5+fAPcgNytK0jhABQ==", "tv_show"=>{"name"=>"John Wick", "description"=>"John Wick", "telecast_time"=>"", "recurrence_event"=>"", "days"=>"", "duration"=>"", "status"=>""}, "commit"=>"Create Tv show"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (4.7ms)
+  Rendered tv_shows/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 38ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tv_shows" for ::1 at 2020-05-01 13:35:42 +0530
+Processing by TvShowsController#index as HTML
+  Rendering tv_shows/index.html.erb within layouts/application
+  [1m[36mTvShow Load (0.2ms)[0m  [1m[34mSELECT "tv_shows".* FROM "tv_shows"[0m
+  Rendered tv_shows/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tv_shows/new" for ::1 at 2020-05-01 13:35:44 +0530
+Processing by TvShowsController#new as HTML
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (1.1ms)
+  Rendered tv_shows/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/_form.html.erb:69: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/_form.html.erb:71: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/tv_shows/_form.html.erb:69: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/tv_shows/_form.html.erb:71: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/tv_shows/new.html.erb:3:in `_app_views_tv_shows_new_html_erb___1802506142113273743_69990329087560'
+Started GET "/tv_shows/new" for ::1 at 2020-05-01 13:35:56 +0530
+Processing by TvShowsController#new as HTML
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (1.5ms)
+  Rendered tv_shows/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/_form.html.erb:63: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/tv_shows/_form.html.erb:63: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/tv_shows/new.html.erb:3:in `_app_views_tv_shows_new_html_erb___1802506142113273743_69990331112100'
+Started GET "/tv_shows/new" for ::1 at 2020-05-01 13:36:03 +0530
+Processing by TvShowsController#new as HTML
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (4.2ms)
+  Rendered tv_shows/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tv_shows/new" for ::1 at 2020-05-01 13:36:13 +0530
+Processing by TvShowsController#new as HTML
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (18.1ms)
+  Rendered tv_shows/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tv_shows/new" for ::1 at 2020-05-01 13:36:39 +0530
+Processing by TvShowsController#new as HTML
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (4.4ms)
+  Rendered tv_shows/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tv_shows" for ::1 at 2020-05-01 13:36:44 +0530
+Processing by TvShowsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6O+HWEt15op2fFAco3g8w8c/2MV84ugjKA5fwrwkTbmWYQWaNRQL6U94fCWCPRTRLzXCiY9bFkFmm6/Zj/NeJA==", "tv_show"=>{"name"=>"John Wick", "description"=>"John Wick", "telecast_time"=>"", "recurrence_event"=>"", "days"=>"", "duration"=>"", "status"=>"", "category_id"=>"1", "channel_id"=>"3"}, "commit"=>"Create Tv show"}
+Unpermitted parameters: :category_id, :channel_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (5.6ms)
+  Rendered tv_shows/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tv_shows" for ::1 at 2020-05-01 13:37:33 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TvShowsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sqLFlRxJ5COZdwASp6rJxEZ079hO2NHGKoTIpFl/vMbMLEdXYigJQKBzLCuG7+HWrn71lL1hL6RkETi/aqivWw==", "tv_show"=>{"name"=>"John Wick", "description"=>"John Wick", "telecast_time"=>"", "recurrence_event"=>"", "days"=>"", "duration"=>"", "status"=>"", "category_id"=>"1", "channel_id"=>"1"}, "commit"=>"Create Tv show"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (14.1ms)
+  Rendered tv_shows/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 249ms (Views: 174.2ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/category" for ::1 at 2020-05-01 13:37:51 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/category"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/categories" for ::1 at 2020-05-01 13:37:55 +0530
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/new" for ::1 at 2020-05-01 13:37:57 +0530
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (4.7ms)
+  Rendered categories/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 47ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for ::1 at 2020-05-01 13:38:00 +0530
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8KJ4xacF+RPxiNoukukKmZMlrg+AXg8I9QCH39umnviw9fev7p62oE+3uivpWB2gAQQLO993eacBn+zrINLUUw==", "category"=>{"name"=>"JJ", "description"=>""}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JJ"], ["description", ""], ["created_at", "2020-05-01 08:08:00.479330"], ["updated_at", "2020-05-01 08:08:00.479330"]]
+  [1m[35m (113.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 118ms (ActiveRecord: 114.2ms)
+
+
+Started GET "/categories/1" for ::1 at 2020-05-01 13:38:00 +0530
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/channels/1" for ::1 at 2020-05-01 13:38:03 +0530
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Channel with 'id'=1):
+  
+app/controllers/channels_controller.rb:67:in `set_channel'
+Started GET "/channels/" for ::1 at 2020-05-01 13:38:06 +0530
+Processing by ChannelsController#index as HTML
+  Rendering channels/index.html.erb within layouts/application
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  Rendered channels/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/channels/new" for ::1 at 2020-05-01 13:38:07 +0530
+Processing by ChannelsController#new as HTML
+  Rendering channels/new.html.erb within layouts/application
+  Rendered channels/_form.html.erb (9.2ms)
+  Rendered channels/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 55ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/channels" for ::1 at 2020-05-01 13:38:09 +0530
+Processing by ChannelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+lexx72IVVEuSpaRgYbgjsDf7HmRhadKn7rfsEHsU1jAKEHtZki/ZtHcA9jnzCR+RDA5b4KUCjhXN31isQdYVg==", "channel"=>{"name"=>"CC", "description"=>""}, "commit"=>"Create Channel"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "channels" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "CC"], ["description", ""], ["created_at", "2020-05-01 08:08:09.672747"], ["updated_at", "2020-05-01 08:08:09.672747"]]
+  [1m[35m (120.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/channels/1
+Completed 302 Found in 128ms (ActiveRecord: 121.8ms)
+
+
+Started GET "/channels/1" for ::1 at 2020-05-01 13:38:09 +0530
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering channels/show.html.erb within layouts/application
+  Rendered channels/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-05-01 13:38:12 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sys-user/.rvm/gems/ruby-2.4.5@involvio/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tv_shows" for ::1 at 2020-05-01 13:38:15 +0530
+Processing by TvShowsController#index as HTML
+  Rendering tv_shows/index.html.erb within layouts/application
+  [1m[36mTvShow Load (0.5ms)[0m  [1m[34mSELECT "tv_shows".* FROM "tv_shows"[0m
+  Rendered tv_shows/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tv_shows/new" for ::1 at 2020-05-01 13:38:17 +0530
+Processing by TvShowsController#new as HTML
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (8.1ms)
+  Rendered tv_shows/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tv_shows" for ::1 at 2020-05-01 13:38:22 +0530
+Processing by TvShowsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZErqxdEixlJouQhtwfnuwKyOJ+9bmME7pEg2ovsKhxquz5zjGEJKMcNNMJa/u+Hg1E0WAvVb/qXGref5vIUgZg==", "tv_show"=>{"name"=>"John Wick", "description"=>"1", "telecast_time"=>"", "recurrence_event"=>"", "days"=>"", "duration"=>"", "status"=>"", "category_id"=>"1", "channel_id"=>"1"}, "commit"=>"Create Tv show"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tv_shows" ("name", "description", "days", "status", "channel_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "John Wick"], ["description", "1"], ["days", ""], ["status", ""], ["channel_id", 1], ["category_id", 1], ["created_at", "2020-05-01 08:08:22.152730"], ["updated_at", "2020-05-01 08:08:22.152730"]]
+  [1m[35m (32.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tv_shows/1
+Completed 302 Found in 42ms (ActiveRecord: 33.7ms)
+
+
+Started GET "/tv_shows/1" for ::1 at 2020-05-01 13:38:22 +0530
+Processing by TvShowsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTvShow Load (0.3ms)[0m  [1m[34mSELECT  "tv_shows".* FROM "tv_shows" WHERE "tv_shows"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tv_shows/show.html.erb within layouts/application
+  Rendered tv_shows/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/show.html.erb:30: syntax error, unexpected ')', expecting '='
+r.append=( @tv_show.boolean, );@output_buffer.safe_append='
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/show.html.erb:40: syntax error, unexpected ')', expecting '='
+er.append=( @tv_show.string, );@output_buffer.safe_append='
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/show.html.erb:50: syntax error, unexpected ')', expecting '='
+r.append=( @tv_show.integer, );@output_buffer.safe_append='
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/show.html.erb:60: syntax error, unexpected ')', expecting '='
+er.append=( @tv_show.string, );@output_buffer.safe_append='
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/show.html.erb:70: syntax error, unexpected ')', expecting '='
+ppend=( @tv_show.belongs_to, );@output_buffer.safe_append='
+                              ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/show.html.erb:87: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/sys-user/karthikeyan/practice/rails/tv_favorite/app/views/tv_shows/show.html.erb:89: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tv_shows/show.html.erb:30: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/show.html.erb:40: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/show.html.erb:50: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/show.html.erb:60: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/show.html.erb:70: syntax error, unexpected ')', expecting '='
+app/views/tv_shows/show.html.erb:87: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tv_shows/show.html.erb:89: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/tv_shows/1" for ::1 at 2020-05-01 13:38:59 +0530
+Processing by TvShowsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTvShow Load (0.5ms)[0m  [1m[34mSELECT  "tv_shows".* FROM "tv_shows" WHERE "tv_shows"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tv_shows/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered tv_shows/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tv_shows/1" for ::1 at 2020-05-01 13:39:15 +0530
+Processing by TvShowsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTvShow Load (0.3ms)[0m  [1m[34mSELECT  "tv_shows".* FROM "tv_shows" WHERE "tv_shows"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tv_shows/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT  "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered tv_shows/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tv_shows" for ::1 at 2020-05-01 13:39:19 +0530
+Processing by TvShowsController#index as HTML
+  Rendering tv_shows/index.html.erb within layouts/application
+  [1m[36mTvShow Load (0.6ms)[0m  [1m[34mSELECT "tv_shows".* FROM "tv_shows"[0m
+  Rendered tv_shows/index.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `stream_url' for #<TvShow:0x00007fecd008de18>):
+    21:       <tr>
+    22:         <td><%= tv_show.name %></td>
+    23:         <td><%= tv_show.description %></td>
+    24:         <td><%= tv_show.stream_url %></td>
+    25:         <td><%= tv_show.telecast_time %></td>
+    26:         <td><%= tv_show.recurrence_event %></td>
+    27:         <td><%= tv_show.days %></td>
+  
+app/views/tv_shows/index.html.erb:24:in `block in _app_views_tv_shows_index_html_erb__936185036720790629_70327539705980'
+app/views/tv_shows/index.html.erb:20:in `_app_views_tv_shows_index_html_erb__936185036720790629_70327539705980'
+Started GET "/tv_shows/new" for ::1 at 2020-05-01 13:39:55 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TvShowsController#new as HTML
+  Rendering tv_shows/new.html.erb within layouts/application
+  Rendered tv_shows/_form.html.erb (25.0ms)
+  Rendered tv_shows/new.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 265ms (Views: 220.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/tv_shows" for ::1 at 2020-05-01 13:39:56 +0530
+Processing by TvShowsController#index as HTML
+  Rendering tv_shows/index.html.erb within layouts/application
+  [1m[36mTvShow Load (0.6ms)[0m  [1m[34mSELECT "tv_shows".* FROM "tv_shows"[0m
+  Rendered tv_shows/index.html.erb within layouts/application (31.8ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `stream_url' for #<TvShow:0x00007f25300340d8>):
+    21:       <tr>
+    22:         <td><%= tv_show.name %></td>
+    23:         <td><%= tv_show.description %></td>
+    24:         <td><%= tv_show.stream_url %></td>
+    25:         <td><%= tv_show.telecast_time %></td>
+    26:         <td><%= tv_show.recurrence_event %></td>
+    27:         <td><%= tv_show.days %></td>
+  
+app/views/tv_shows/index.html.erb:24:in `block in _app_views_tv_shows_index_html_erb___2757736203420344987_69898953208920'
+app/views/tv_shows/index.html.erb:20:in `_app_views_tv_shows_index_html_erb___2757736203420344987_69898953208920'
+Started GET "/tv_shows" for ::1 at 2020-05-01 13:39:58 +0530
+Processing by TvShowsController#index as HTML
+  Rendering tv_shows/index.html.erb within layouts/application
+  [1m[36mTvShow Load (0.3ms)[0m  [1m[34mSELECT "tv_shows".* FROM "tv_shows"[0m
+  Rendered tv_shows/index.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `stream_url' for #<TvShow:0x00007f253db91b30>):
+    21:       <tr>
+    22:         <td><%= tv_show.name %></td>
+    23:         <td><%= tv_show.description %></td>
+    24:         <td><%= tv_show.stream_url %></td>
+    25:         <td><%= tv_show.telecast_time %></td>
+    26:         <td><%= tv_show.recurrence_event %></td>
+    27:         <td><%= tv_show.days %></td>
+  
+app/views/tv_shows/index.html.erb:24:in `block in _app_views_tv_shows_index_html_erb___2757736203420344987_69898963192060'
+app/views/tv_shows/index.html.erb:20:in `_app_views_tv_shows_index_html_erb___2757736203420344987_69898963192060'
+Started GET "/tv_shows" for ::1 at 2020-05-01 13:40:08 +0530
+Processing by TvShowsController#index as HTML
+  Rendering tv_shows/index.html.erb within layouts/application
+  [1m[36mTvShow Load (0.3ms)[0m  [1m[34mSELECT "tv_shows".* FROM "tv_shows"[0m
+  Rendered tv_shows/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mTvShow Load (0.3ms)[0m  [1m[34mSELECT  "tv_shows".* FROM "tv_shows" ORDER BY "tv_shows"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTvShow Load (0.4ms)[0m  [1m[34mSELECT  "tv_shows".* FROM "tv_shows" ORDER BY "tv_shows"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."favoritor_id" = $1 AND "favorites"."favoritor_type" = $2 AND "favorites"."favoritable_id" = $3 AND "favorites"."favoritable_type" = $4 AND "favorites"."scope" = $5 ORDER BY "favorites"."id" ASC LIMIT $6[0m  [["favoritor_id", 1], ["favoritor_type", "User"], ["favoritable_id", 1], ["favoritable_type", "TvShow"], ["scope", "favorite"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTvShow Load (0.3ms)[0m  [1m[34mSELECT  "tv_shows".* FROM "tv_shows" WHERE "tv_shows"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "favorites" ("favoritable_type", "favoritable_id", "favoritor_type", "favoritor_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["favoritable_type", "TvShow"], ["favoritable_id", 1], ["favoritor_type", "User"], ["favoritor_id", 1], ["created_at", "2020-05-01 08:12:36.582067"], ["updated_at", "2020-05-01 08:12:36.582067"]]
+  [1m[35m (21.2ms)[0m  [1m[35mCOMMIT[0m

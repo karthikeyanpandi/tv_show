@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tv Shows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Telecast time</th>
+      <th>Recurrence event</th>
+      <th>Days</th>
+      <th>Duration</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tv_shows.each do |tv_show| %>
+      <tr>
+        <td><%= tv_show.name %></td>
+        <td><%= tv_show.description %></td>
+        <td><%= tv_show.telecast_time %></td>
+        <td><%= tv_show.recurrence_event %></td>
+        <td><%= tv_show.days %></td>
+        <td><%= tv_show.duration %></td>
+        <td><%= tv_show.status %></td>
+        <td><%= link_to 'Show', tv_show %></td>
+        <td><%= link_to 'Edit', edit_tv_show_path(tv_show) %></td>
+        <td><%= link_to 'Destroy', tv_show, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tv Show', new_tv_show_path %>
